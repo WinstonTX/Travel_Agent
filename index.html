@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🇮🇸 Iceland Planner · Redesign V3</title>
-<!-- fonts: using system fallback for offline use -->
+<!-- fonts: system fallback for offline -->
 <style>
 :root{--bg:#1a2e22;--surface:rgba(255,252,245,0.07);--surface-hover:rgba(255,252,245,0.11);--card:rgba(255,252,245,0.88);--ink:#f5f0e8;--ink-dark:#2c2a25;--muted:rgba(245,240,232,0.5);--muted-dark:#8a8578;--accent:#6aab7b;--accent-warm:#c4a060;--border:rgba(255,252,245,0.12);--border-card:rgba(200,190,170,0.25);--shadow-sm:0 2px 12px rgba(0,0,0,0.12);--glass:blur(16px) saturate(1.6);--r:20px;--r-sm:14px;--r-xs:8px;--safe:#4ade80;--caution:#fbbf24;--danger:#f87171;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -147,32 +147,25 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
 .seg-card{animation:fadeUp .3s ease-out backwards;}
 
 @media(max-width:768px){
-  /* Topbar: 只保留品牌+PUBLISHED */
   .topbar{padding:0 .75rem;height:44px;gap:.4rem;overflow:hidden;}
   .tb-brand{font-size:.95rem;gap:.3rem;white-space:nowrap;flex-shrink:0;}
   .tb-meta{display:none !important;}
   .tb-btn{display:none !important;}
   .tb-pill{font-size:.48rem;padding:.18rem .45rem;flex-shrink:0;}
   .tb-sep{flex:1;min-width:0;}
-  /* Tabs */
   .tab-nav{padding:0 .5rem;overflow-x:auto;}
   .tab-btn{padding:.55rem .7rem;font-size:.74rem;white-space:nowrap;}
-  /* Hero / Stats */
   .hero{padding:.6rem .75rem .4rem;}
   .stats-panel{grid-template-columns:1fr 1fr;gap:.35rem;padding:.6rem .7rem;}
   .stat-val{font-size:1.1rem;}
   .stat-label{font-size:.44rem;}
-  /* Banner */
   .today-banner{padding:.5rem .75rem .3rem;}
   .banner-grid{grid-template-columns:1fr;}
   .banner-slot{padding:.6rem .7rem;}
-  /* Weather */
   .wx-split{grid-template-columns:1fr;}
   .wx-day-tomorrow{border-left:none;border-top:1px solid var(--border);padding-top:.4rem;}
-  /* Day blocks */
   main{padding:.3rem .6rem 2rem;}
   .day-block{margin-bottom:.6rem;border-radius:var(--r-sm);}
-  .day-toggle{flex-wrap:nowrap;align-items:stretch;}
   .day-num-col{width:58px;min-width:58px;padding:.4rem .25rem;gap:.08rem;}
   .dn-label{font-size:.36rem;padding:.08rem .3rem;}
   .dn-date{font-size:.95rem;}
@@ -184,7 +177,6 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   .dm-stat .v{font-size:.7rem;}
   .dm-stat .l{font-size:.38rem;}
   .chevron{width:26px;height:26px;min-width:26px;font-size:.5rem;}
-  /* Segment cards: 竖排 */
   .seg-list{padding:.5rem;}
   .seg-card{flex-direction:column;border-radius:var(--r-xs);}
   .seg-left{width:100%;min-width:0;flex-direction:row;align-items:center;gap:.35rem;padding:.35rem .55rem;border-right:none;border-bottom:1px solid rgba(200,190,170,0.2);flex-wrap:wrap;}
@@ -197,17 +189,13 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   .seg-sub{font-size:.6rem;}
   .seg-section-val{font-size:.64rem;}
   .seg-notes{font-size:.54rem;word-break:break-word;overflow-wrap:break-word;}
-  /* Footer */
   .footer{flex-direction:column;gap:.7rem;text-align:center;padding:.8rem .75rem;}
   .footer-stats{gap:1rem;justify-content:center;}
   .footer-stat .v{font-size:1rem;}
-  /* Tab frame */
   .tab-frame-wrap{padding:.5rem .6rem .8rem;}
   .tab-frame{height:calc(100vh - 150px);min-height:350px;border-radius:var(--r-sm);}
-  /* 路况行 */
   .route-row{flex-wrap:wrap;gap:.25rem;}
   .route-reason{white-space:normal;word-break:break-word;}
-  /* Plan A/B 分栏 */
   .split-cols{grid-template-columns:1fr !important;}
 }
 </style>
@@ -1016,7 +1004,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   <div class="seg-right">
     <div class="seg-name">🍽️ 晚餐 · The Old Dairy Food Hall（8 家餐厅任选）</div>
     <div class="seg-sub">Selfoss 新老城 · Eyravegur 1 · 老奶厂食堂</div>
-    <div class="seg-section"><div class="seg-section-lbl">参与项目</div><div class="seg-section-val"><ul><li>老奶厂改造，共享座位 300 席</li><li>8 家餐厅 + 2 家酒吧一厅搞定：</li><li>🌏 国际菜：</li><li>  - Menam Thai（泰式咖喱）</li><li>  - Menam Dim Sum（中式点心/饺子）← Bruce 飞 14h 推荐</li><li>  - Takko（墨西哥街头塔可）</li><li>  - Flatey Pizza（意式木烤披萨）</li><li>🍔 汉堡 &amp; 本地：</li><li>  - Rosti Burger &amp; Beer（Smash 汉堡）</li><li>  - Samuelsson Matbar（羊肉串/小牛排，中高端）</li><li>🍷 酒水：</li><li>  - Risid Bar（鸡尾酒/红酒）</li><li>🌀 文化：</li><li>  - Skyrland 互动展（地下，冰岛 Skyr 奶制品历史）</li></ul></div></div>
+    <div class="seg-section"><div class="seg-section-lbl">参与项目</div><div class="seg-section-val"><ul><li>老�����厂改造，共享座位 300 席</li><li>8 家餐厅 + 2 家酒吧一��搞定：</li><li>🌏 国际菜：</li><li>  - Menam Thai（泰式咖喱）</li><li>  - Menam Dim Sum（中式点心/饺子）← Bruce 飞 14h 推荐</li><li>  - Takko（墨西哥街头塔可）</li><li>  - Flatey Pizza（意式木烤披萨）</li><li>🍔 汉堡 &amp; 本地：</li><li>  - Rosti Burger &amp; Beer（Smash 汉堡）</li><li>  - Samuelsson Matbar（羊肉串/小牛排，中高端）</li><li>🍷 酒水：</li><li>  - Risid Bar（鸡尾酒/红酒）</li><li>🌀 文化：</li><li>  - Skyrland 互动展（地下，冰岛 Skyr 奶制品历史）</li></ul></div></div>
     <div class="seg-section"><div class="seg-section-lbl">备注</div><div class="seg-notes">· 地址：Eyravegur 1, 800 Selfoss
 · 营业：每日 11:30-21:00
 · Risid Bar 周五六至深夜
@@ -1324,7 +1312,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
       <span class="seg-transport">✈️ 航班</span>
       
     </div>
-    <div class="seg-badge badge-pending">⚠️ 须预订</div>
+    <div class="seg-badge badge-booked">✅ 已预订</div>
   </div>
   <div class="seg-right">
     <div class="seg-name">🏍️ 雪地摩托 · Vatnajökull</div>
@@ -2378,7 +2366,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
     <div class="day-header-body">
       <div>
         <div class="day-route">Miðhraun → Lýsuhóll 骑马 → 雷克雅未克 → Miðhraun</div>
-        <div class="day-title">斯奈山骑马 · 雷市周日集市 · 老城漫步</div>
+        <div class="day-title">冰岛马骑行 · 雷市跳蚤集市 · Hallgrímskirkja · 老城漫步</div>
       </div>
       <div class="day-meta">
         <div class="dm-stat"><span class="v">12</span><span class="l">行程段</span></div>
@@ -2412,7 +2400,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
       <span class="seg-transport">🚗 自驾</span>
       <span class="seg-km">20 km</span>
     </div>
-    <div class="seg-badge badge-nobook">— 无需预订</div>
+    <div class="seg-badge badge-pending">⚠️ 须预订</div>
   </div>
   <div class="seg-right">
     <div class="seg-name">🚗 出发 → Lýsuhóll 骑马农场</div>
@@ -2426,7 +2414,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   <div class="seg-left">
     <div class="seg-time">09:00</div>
     <div class="seg-tags">
-      <span class="seg-transport">—</span>
+      <span class="seg-transport">✈️ 航班</span>
       
     </div>
     <div class="seg-badge badge-pending">⚠️ 须预订</div>
@@ -2517,7 +2505,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   <div class="seg-left">
     <div class="seg-time">15:30</div>
     <div class="seg-tags">
-      <span class="seg-transport">🚗 自驾 + 🚶 步行</span>
+      <span class="seg-transport">✈️ 航班</span>
       <span class="seg-km">2 km</span>
     </div>
     <div class="seg-badge badge-nobook">— 无需预订</div>
@@ -2541,7 +2529,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
     <div class="seg-badge badge-nobook">— 无需预订</div>
   </div>
   <div class="seg-right">
-    <div class="seg-name">🛍️ Laugavegur 购物街 · 老城漫步</div>
+    <div class="seg-name">��️ Laugavegur 购物街 · 老城漫步</div>
     <div class="seg-sub">雷市主街 · 设计品店+咖啡馆+涂鸦</div>
     <div class="seg-section"><div class="seg-section-lbl">参与项目</div><div class="seg-section-val"><ul><li>主要逛点：</li><li>- 66°North 冰岛本土户外品牌</li><li>- Blue Lagoon 护肤品</li><li>- Farmers Market 羊毛制品</li><li>- Rainbow Street 彩虹街（教堂下）</li><li>- Reykjavík Roasters 咖啡</li></ul></div></div>
     <div class="seg-section"><div class="seg-section-lbl">备注</div><div class="seg-notes">· 核心街：Laugavegur + Skólavörðustígur
@@ -2590,7 +2578,7 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
   <div class="seg-left">
     <div class="seg-time">21:00</div>
     <div class="seg-tags">
-      
+      <span class="seg-transport">✈️ 航班</span>
       
     </div>
     <div class="seg-badge badge-booked">✅ 已预订</div>
@@ -2616,8 +2604,8 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
     </div>
     <div class="day-header-body">
       <div>
-        <div class="day-route">Snæfellsnes → Reykjavík → Blue Lagoon → KEF</div>
-        <div class="day-title">雷市游览 · 蓝湖温泉 · 返回凯夫拉维克</div>
+        <div class="day-route">Miðhraun → Reykjavík · 自由安排</div>
+        <div class="day-title">自由活动 · 雷克雅未克</div>
       </div>
       <div class="day-meta">
         <div class="dm-stat"><span class="v">2</span><span class="l">行程段</span></div>
@@ -2673,8 +2661,8 @@ main{max-width:1100px;margin:0 auto;padding:.5rem 2rem 3rem;}
     </div>
     <div class="day-header-body">
       <div>
-        <div class="day-route">KEF → Helsinki → Hong Kong</div>
-        <div class="day-title">✈️ 返程 · Finnair AY994 + AY099</div>
+        <div class="day-route">KEF → HEL → HKG / MAD / SLC</div>
+        <div class="day-title">返程：好心 → 回国 · Winston → 西班牙 · 教练 → 美国</div>
       </div>
       <div class="day-meta">
         <div class="dm-stat"><span class="v">3</span><span class="l">行程段</span></div>
